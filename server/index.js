@@ -7,7 +7,10 @@ const app = express()
 const renderer = require('vue-server-renderer').createRenderer()
 
 const page = new Vue({
-    template: '<h1>Hello</h1>'
+    data:{
+        title:'gogoend'
+    },
+    template: '<h1>Hello, {{title}}</h1>'
 })
 
 app.get('/', async (req,res)=>{
